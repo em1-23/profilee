@@ -1,0 +1,202 @@
+:root{
+    --background-color: #e6e6e6;
+    --bacground-left-color: #0f163f;
+    --borders-color:#0d5551;
+    --color:#000;
+}
+
+html{
+    background-color:var(--background-color);
+    font-family: Lalezar , sans-serif;
+    font-size: large;
+    color: var(--background-color);
+}
+
+.photo{
+    background-color: var(--bacground-left-color);
+    border-left: 20px var(--borders-color) solid;
+    border-right: 20px var(--borders-color) solid;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    border-radius: 50%;
+    animation: Round 4s ease-in-out 0.1s infinite normal both;
+}
+
+@keyframes Round{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.photo-1{
+    background-image:url(photo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 10.8%;
+    top: 10%;
+    border-radius: 50%;
+    direction: rtl;
+}
+
+h2{
+    font-family: 'Aref Ruqaa Ink' ,Rakkas ,'Cairo Play' , sans-serif;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 3rem;
+    width: 40%;
+    padding-right: 15px;
+    box-shadow: 10px 10px 15px 0.5px var(--color);
+}
+
+h2:active{
+    animation: Round-The-h2 5s ease 0s infinite normal both;
+}
+
+@keyframes Round-The-h2{
+    0%{
+        border-bottom: 5px var(--borders-color) solid;
+    }
+    25%{
+        border-bottom: 5px var(--bacground-left-color) solid;
+        border-left: 5px var(--borders-color) solid;
+    }
+    50%{
+        border-bottom: 5px var(--color) solid;
+        border-left: 5px var(--bacground-left-color) solid;
+        border-top: 5px var(--borders-color) solid;
+    }
+    75%{
+        border-bottom: 5px red solid;
+        border-left: 5px var(--color) solid;
+        border-top: 5px var(--bacground-left-color) solid;
+        border-right: 5px var(--borders-color) solid;
+    }
+    100%{
+        border-bottom: 5px var(--borders-color) solid;
+    }
+}
+
+.center{
+    width: 50%;
+    background-color: var(--bacground-left-color);
+    height: 96vh;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    padding-right: 15px;
+    padding-top: 15px;
+    box-shadow: 0px 10px 15px 0.5px var(--borders-color);
+    transition: all 1s ease-in-out 0.1s;
+}
+
+.center:hover{
+    animation: Round-The-Center 5s ease 4s infinite normal both;
+    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 3rem;
+}
+
+@keyframes Round-The-Center{
+    0%{
+        box-shadow: 0px 10px 2px 2px blue;
+    }
+    25%{
+        box-shadow: 10px 10px 2px 2px red;
+    }
+    50%{
+        box-shadow: 10px 0px 2px 2px green;
+    }
+    75%{
+        box-shadow: -10px 0px 2px 2px red;
+    }
+    100%{
+        box-shadow: 0px 10px 2px 2px blue;
+    }
+}
+
+.bottom{
+    position: absolute;
+    left: 1%;
+    top: 45%;
+    width: 500px;
+    color: var(--bacground-left-color);
+}
+
+.bottom>h2{
+    background-color: var(--bacground-left-color);
+    width: 80%;
+}
+
+.Icons-Out-Off-The_programming{
+    top: 15%;
+    right: 40%;
+    position: absolute;
+    z-index: 999;
+    width: 2px;
+}
+
+.fa-whatsapp{color: #25d366; transition: all 1s ease-in-out 0.1s;}
+.fa-facebook{color: #1877f2; transition: all 1s ease-in-out 0.1s;}
+.fa-telegram{color: #0088cc; transition: all 1s ease-in-out 0.1s;}
+.fa-github{color: #181717; transition: all 1s ease-in-out 0.1s;}
+.fa-youtube{color: #ff0000; transition: all 1s ease-in-out 0.1s;}
+.fa-linkedin{color: #1877f2; transition: all 1s ease-in-out 0.1s;}
+
+.Icons-Out-Off-The_programming> .icons{
+    color: var(--background-color);
+    font-size: xx-large;
+    transition: all 1s ease-in-out 0.1s;
+}
+
+.fa-facebook:hover,.fa-telegram:hover,.fa-youtube:hover,.fa-whatsapp:hover,.fa-github:hover ,.fa-linkedin:hover{
+    color: var(--background-color);
+}
+
+@media (max-width: 400px){
+    html{
+        font-size: 11px;
+    }
+    .photo-1{
+        left: 4%;
+        height: 100px;
+        width: 100px;
+    }
+    .photo{
+        position: absolute;
+        left: -0.7%;
+        height: 100px;
+        width: 100px;
+    }
+    h2{
+        width: 35%;
+    }
+    .bottom{
+        top: 25%;
+        left: 1%;
+        width: 150px;
+    }
+    .Icons-Out-Off-The_programming{
+        right: 45%;
+    }
+    .Icons-Out-Off-The_programming> .icons{
+        font-size: large;
+    }
+}
